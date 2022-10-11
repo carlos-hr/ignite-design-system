@@ -1,6 +1,2 @@
-/node_modules
-/packages/docs/node_modules
-/packages/react/node_modules
-
-/packages/react/dist
-/packages/tokens/dist
+node_modules
+dist

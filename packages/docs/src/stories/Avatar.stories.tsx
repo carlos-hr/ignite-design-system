@@ -8,6 +8,12 @@ export default {
     src: 'https://github.com/carlos-hr.png',
     alt: 'alt text',
   },
+
+  argTypes: {
+    src: {
+      control: 'text',
+    },
+  },
 } as Meta<AvatarProps>
 
 export const Primary: StoryObj<AvatarProps> = {}

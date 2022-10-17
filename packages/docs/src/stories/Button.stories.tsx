@@ -25,9 +25,7 @@ export default {
       control: 'inline-radio',
     },
     disabled: {
-      control: {
-        type: 'boolean',
-      },
+      control: 'boolean',
     },
   },
 } as Meta<ButtonProps>

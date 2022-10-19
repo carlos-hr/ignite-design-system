@@ -18,4 +18,6 @@ export const TooltipContent = styled(Tooltip.Content, {
   borderRadius: '$sm',
 })
 
-export const TooltipArrow = styled(Tooltip.Arrow, {})
+export const TooltipArrow = styled(Tooltip.Arrow, {
+  fill: '$gray900',
+})

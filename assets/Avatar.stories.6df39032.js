@@ -1,0 +1,2 @@
+import{A as t}from"./index.0b38ea2a.js";import"./index.0eedf0cc.js";import"./iframe.0c9c35e4.js";import"./index.69b7eb94.js";import"./jsx-runtime.c545e69c.js";const c={title:"Data display/Avatar",component:t,args:{src:"https://github.com/carlos-hr.png",alt:"alt text"},argTypes:{src:{control:"text"}}},p={},l={args:{src:void 0}},m=["Primary","WithFallback"];export{p as Primary,l as WithFallback,m as __namedExportsOrder,c as default};
+//# sourceMappingURL=Avatar.stories.6df39032.js.map

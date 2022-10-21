@@ -13,8 +13,8 @@ export default {
 
       return (
         <>
-          <Button onClick={() => setOpen(true)}>Show toast</Button>
-          <Toast open={open} />
+          <Button onClick={() => setOpen(true)}>Show toast !</Button>
+          {open && <Toast />}
         </>
       )
     },

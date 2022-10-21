@@ -1,36 +1,32 @@
 import { X } from 'phosphor-react'
-import { useCallback, useState } from 'react'
-import { Text } from '../Text'
-import { CloseIcon, ToastContainer } from './styles'
+import { ComponentProps } from 'react'
+import {
+  ToastProvider,
+  ToastRoot,
+  ToastTitle,
+  ToastDescription,
+  ToastAction,
+  ToastClose,
+  ToastViewport,
+} from './styles'
 
-export interface ToastProps {
+export interface ToastProps extends ComponentProps<typeof ToastRoot> {
   open: boolean
 }
 
-export function Toast({ open = false }: ToastProps) {
-  const [close, setCloseToast] = useState(false)
-
-  const showToast = useCallback(() => {
-    if (open && !close) {
-      return true
-    } else if (open && close) {
-      return false
-    } else {
-      return false
-    }
-  }, [close, open])
-
+export function Toast(props: ToastProps) {
   return (
-    <>
-      {showToast() && (
-        <ToastContainer>
-          <Text>Toast</Text>
+    <ToastProvider duration={3000}>
+      <ToastRoot {...props}>
+        <ToastTitle>Toast Title</ToastTitle>
+        <ToastDescription />
+        <ToastAction />
+        <ToastClose>
+          <X />
+        </ToastClose>
+      </ToastRoot>
 
-          <CloseIcon role="button" onClick={() => setCloseToast(true)}>
-            <X />
-          </CloseIcon>
-        </ToastContainer>
-      )}
-    </>
+      <ToastViewport />
+    </ToastProvider>
   )
 }
